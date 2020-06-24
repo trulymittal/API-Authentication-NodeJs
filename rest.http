@@ -1,0 +1,37 @@
+GET http://localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTI1NzA5NjQsImV4cCI6MTU5MjU3MDk3OSwiYXVkIjoiNWVlYTBlOTlkMTU3ZjYzZjNlMzYxYjQxIiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ.Mmmay-De0wYGG0Uamra-lTYlrn7jmdvPSuB1WBWAMGM
+
+###Login Route
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "jhondoe@gmail.com",
+  "password": "1234"
+}
+
+
+###Register Route
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+  "email": "newuser@gmail.com",
+  "password": "1234"
+}
+
+###Refresh token Route
+POST http://localhost:3000/auth/refresh-token
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTI1ODY3MDAsImV4cCI6MTU5MjU4NjczMCwiYXVkIjoiNWVlYTBlOTlkMTU3ZjYzZjNlMzYxYjQxIiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ.Cd8cQc4wTYftGBETkXiuX_tLl60CqydR3j199Jtemac"
+}
+
+###Logout Route
+DELETE http://localhost:3000/auth/logout
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTI1ODcyOTIsImV4cCI6MTYyNDE0NDg5MiwiYXVkIjoiNWVlYTBlOTlkMTU3ZjYzZjNlMzYxYjQxIiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ.OGfV-n2fsuV2D5nvUGEzU7KLtkbIy1Pmm4DwxB75MKU"
+}
