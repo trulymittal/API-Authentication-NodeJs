@@ -41,11 +41,13 @@ Step 4: To generate 256-bit keys for JWT
 node ./helpers/generate_keys.js
 ```
 
-Step 4: Start the API by
+Step 5: Start the API by
 
 ```bash
 npm start
 ```
+
+Step 6 (Optional): Change the expiration time of Access Token and Refresh Token according to your needs by going inside the **./helpers/jwt_helper.js** file.
 
 ## Author
 
