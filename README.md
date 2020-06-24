@@ -47,7 +47,7 @@ Step 5: Start the API by
 npm start
 ```
 
-Step 6 (Optional): Change the expiration time of Access Token and Refresh Token according to your needs by going inside the **./helpers/jwt_helper.js** file.
+Step 6 (Optional): Change the expiration time of Access Token and Refresh Token according to your needs by going inside the **`./helpers/jwt_helper.js`** file.
 
 ## Author
 
