@@ -5,9 +5,7 @@ const client = require('./init_redis')
 module.exports = {
   signAccessToken: (userId) => {
     return new Promise((resolve, reject) => {
-      const payload = {
-        iss: '123',
-      }
+      const payload = {}
       const secret = process.env.ACCESS_TOKEN_SECRET
       const options = {
         expiresIn: '15s',
@@ -15,18 +13,12 @@ module.exports = {
         audience: userId,
       }
       JWT.sign(payload, secret, options, (err, token) => {
-        console.log('start')
         if (err) {
           console.log(err.message)
-          // reject(err)
-          console.log(1)
           reject(createError.InternalServerError())
           return
-          console.log(2)
         }
-        console.log(3)
         resolve(token)
-        console.log(4)
       })
     })
   },
